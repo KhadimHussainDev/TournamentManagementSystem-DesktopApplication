@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0C41AE6-3F39-4BFC-8368-91AA9F010993}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TournamentManegmentSystemDesktopApplication</RootNamespace>
+    <AssemblyName>TournamentManegmentSystemDesktopApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\password.cs" />
+    <Compile Include="BL\schedule.cs" />
+    <Compile Include="BL\teams.cs" />
+    <Compile Include="BL\Tournament.cs" />
+    <Compile Include="DL\passwordDL.cs" />
+    <Compile Include="DL\scheduleDL.cs" />
+    <Compile Include="DL\teamsDL.cs" />
+    <Compile Include="DL\TournamenDL.cs" />
+    <Compile Include="GUI\AddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddSchedule.Designer.cs">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddTeam.Designer.cs">
+      <DependentUpon>AddTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddTournament.Designer.cs">
+      <DependentUpon>AddTournament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AllTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AllTeams.Designer.cs">
+      <DependentUpon>AllTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DeletePoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DeletePoints.Designer.cs">
+      <DependentUpon>DeletePoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DeleteSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DeleteSchedule.Designer.cs">
+      <DependentUpon>DeleteSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DeleteTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DeleteTeam.Designer.cs">
+      <DependentUpon>DeleteTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DeleteTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DeleteTournament.Designer.cs">
+      <DependentUpon>DeleteTournament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditPoints.Designer.cs">
+      <DependentUpon>EditPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditPointTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditPointTable.Designer.cs">
+      <DependentUpon>EditPointTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditSchedule.Designer.cs">
+      <DependentUpon>EditSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditScheduledMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditScheduledMatch.Designer.cs">
+      <DependentUpon>EditScheduledMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditTeam.Designer.cs">
+      <DependentUpon>EditTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditTournament.Designer.cs">
+      <DependentUpon>EditTournament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditTournaments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditTournaments.Designer.cs">
+      <DependentUpon>EditTournaments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManageTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageTeams.Designer.cs">
+      <DependentUpon>ManageTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PointTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PointTable.Designer.cs">
+      <DependentUpon>PointTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Tournaments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Tournaments.Designer.cs">
+      <DependentUpon>Tournaments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SignIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SignIN.Designer.cs">
+      <DependentUpon>SignIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddSchedule.resx">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddTeam.resx">
+      <DependentUpon>AddTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddTournament.resx">
+      <DependentUpon>AddTournament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AllTeams.resx">
+      <DependentUpon>AllTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DeletePoints.resx">
+      <DependentUpon>DeletePoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DeleteSchedule.resx">
+      <DependentUpon>DeleteSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DeleteTeam.resx">
+      <DependentUpon>DeleteTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DeleteTournament.resx">
+      <DependentUpon>DeleteTournament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditPoints.resx">
+      <DependentUpon>EditPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditPointTable.resx">
+      <DependentUpon>EditPointTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditSchedule.resx">
+      <DependentUpon>EditSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditScheduledMatch.resx">
+      <DependentUpon>EditScheduledMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditTeam.resx">
+      <DependentUpon>EditTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditTournament.resx">
+      <DependentUpon>EditTournament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditTournaments.resx">
+      <DependentUpon>EditTournaments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageTeams.resx">
+      <DependentUpon>ManageTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PointTable.resx">
+      <DependentUpon>PointTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Tournaments.resx">
+      <DependentUpon>Tournaments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SignIN.resx">
+      <DependentUpon>SignIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Blue Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green Button.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
